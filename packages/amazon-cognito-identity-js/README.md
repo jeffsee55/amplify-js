@@ -784,6 +784,15 @@ The CookieStorage object receives a map (data) in its constructor that may have 
 - data.secure Cookie secure flag (default: true)
 - data.sameSite Cookie request behaviour (default: null)
 
+For localhost provide the following:
+
+```js
+var storage = new AmazonCognitoIdentity.CookieStorage({
+  domain: "localhost",
+  secure: false,
+});
+```
+
 **Use case 27.** Selecting the MFA method and authenticating using TOTP.
 
 ```js
